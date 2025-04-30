@@ -1,0 +1,12 @@
+description: BSP Display Audio Photo Example
+dependencies:
+  espressif/esp_lv_decoder: "^0.1.2"
+  espressif/esp_lv_fs: "^1.0.0"
+  espressif/esp_mmap_assets: "*"
+  lvgl/lvgl: "8.3.11"
+  espressif/button:
+    version: "==3.3.1"
+    public: true
+  espressif/knob:
+    version: "==1.0.0"
+    public: true

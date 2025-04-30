@@ -1,7 +1,7 @@
-<h1 align = "center">UEDX24240013-MD50ESP32_1.3inch-Knob-Display</h1>
+<h1 align = "center">UEDX12115010-MD33E-1inch-Knob</h1>
 
 <p align="center" width="90%">
-    <img src="image/1.3.png" alt="">
+    <img src="image/1inch.png" alt="">
 </p>
 
 ## **English | [中文](./README_CN.md)**
@@ -21,16 +21,15 @@
 ## Version iteration:
 |   Development board Version   |  Screen size   |   Resolution  | Update date        |Update description|
 | :-------------------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |:-------------------------------: |
-| UEDX24240013-MD50E | 1.3-inch |  240*240  |2024-07-23      | Original version   |
+| UEDX12115010-MD33E | 1-inch |  128*115  |2025-03-23      | Original version   |
 
 ## PurchaseLink
 
 | Product                     | SOC           |  FLASH  |  RAM   | Link                   |
 | :------------------------: | :-----------: |:-------: | :---------: | :------------------: |
-| UEDX24240013-MD50E   | ESP32c3 |   4M   | 400KB | [VIEWE Mall](https://viewedisplay.com/product/esp32-7-inch-800x480-rgb-ips-tft-display-touch-screen-arduino-lvgl-uart/)  |
+| UEDX12115010-MD33E   | ESP32c2 |   4M   | 400KB |   |
 
 ## Directory
-- [Describe](#describe)
 - [Module](#module)
 - [PinOverview](#pinoverview)
 - [QuickStart](#quickstart)
@@ -39,25 +38,21 @@
 - [Information](#information)
 - [DependentLibraries](#dependentlibraries)
 
-## Describe
-
-UEDX24240013-MD50ESP32_1.3inch-Knob-Display is a development board with square 1.3-inch 240 * 240 resolution display, based on ESP32C3, suitable for the development of microcontroller projects with display.
-
 
 ## Module
 
 ### 1.MCU
 
-* Chip: ESP32-C3
+* Chip: ESP32-C2
 * FLASH: 4M
-* For more details, please visit[Espressif ESP32-C3 Datashee](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)
+* For more details, please visit[Espressif ESP32-C2 Datashee](https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf)
 
 ### 2. Screen
 
-* Size: 1.3-inch IPS screen
-* Resolution: 240x240px
+* Size: 1-inch IPS screen
+* Resolution: 128x115px
 * Screen type: IPS
-* Driver chip: GC9A01
+* Driver chip: GC9107
 * Compatibility library:  ESP32_Display_Panel
 * Bus communication protocol: 4 Wire SPI
 
@@ -67,29 +62,29 @@ UEDX24240013-MD50ESP32_1.3inch-Knob-Display is a development board with square 1
 
 ## PinOverview
 
-| IPS Screen Pin  | ESP32C3 Pin|
+| IPS Screen Pin  | ESP32C2 Pin|
 | :------------------: | :------------------:|
-| SPI-CS         | IO10      |
-| SPI-SCK      | IO1       |
+| SPI-CS       | IO2      |
+| SPI-SCK      | IO1      |
 | SPI-SDA      | IO0      |
-| SPI-DC       | IO4       |
-|   LCD-TE       |  IO5   | 
-| BACKLIGHT  | IO8       |
+| SPI-DC       | IO3      |
+| LCD-RST      |  IO10    | 
+| BACKLIGHT    | IO8      |
 
 
-| button Pin  | ESP32C3 Pin|
+| button Pin  | ESP32C2 Pin|
 | :------------------: | :------------------:|
 |   boot    | IO9       |
 
-| Encoder Pin  | ESP32C3 Pin|
+| Encoder Pin  | ESP32C2 Pin|
 | :------------------: | :------------------:|
-| PHA         | IO7       |
+| PHA         | IO5       |
 | PHB         | IO6       |
 
-| USB/UART Pin  | ESP32C3 Pin|
+| UART Pin  | ESP32C2 Pin|
 | :------------------: | :------------------:|
-| USB-DN         | IO18      |
-| USB-DP         | IO19      |
+| UART0RX         | IO19      |
+| UART0TX         | IO20      |
 
 ## QuickStart
 
@@ -97,8 +92,8 @@ UEDX24240013-MD50ESP32_1.3inch-Knob-Display is a development board with square 1
 
 | Example | Support IDE And Version| Description | Picture |
 | ------  | ------  | ------ | ------ | 
-| [ESP-IDF](./examples/ESP-IDF) | `[ESP-IDF V5.1/5.2/5.3]` | idf driver example code |  |
-| [SquareLinePorting](./examples/SquareLinePorting) | `[Arduino IDE][>= esp32_v3.0.7]` | SquareLine porting example for Arduino |  |
+| [ESP-IDF](./examples/esp-idf) | `[ESP-IDF V5.4]` | idf driver example code |  |
+| [SquareLinePorting]() | `[Arduino IDE][>= esp32_v3.1.0]` | SquareLine porting example for Arduino |  |
 
 
 | Firmware | Description | Picture |
@@ -127,11 +122,11 @@ UEDX24240013-MD50ESP32_1.3inch-Knob-Display is a development board with square 1
 
 5. Select the correct settings in the Tools menu, as shown in the table below.
 
-#### ESP32-C3
+#### ESP32-C2
 | Setting                               | Value                                 |
 | :-------------------------------: | :-------------------------------: |
 | Board                                 | ESP32C3 Dev Module           |
-| CPU Frequency                   | 160MHz (WiFi)                    |
+| CPU Frequency                   | 120MHz (WiFi)                    |
 | Core Debug Level                | None                                 |
 | USB CDC On Boot                | Disabled                              |
 | Erase All Flash Before Sketch Upload                | Disabled                             |
@@ -184,13 +179,11 @@ UEDX24240013-MD50ESP32_1.3inch-Knob-Display is a development board with square 1
 </p>
 
 ## Information
-[products specification](information/UEDX24240013-MD50E%20V3.3%20SPEC.pdf)
+[products specification](information/UEDX12115010-MD33E%20V1.0%20SPEC.pdf)
 
-[Display Datasheet](information/UE013QV-RH13-A003B.pdf)
+[GC9107 Datasheet](information/GC9107%20DataSheet%20V1.3.pdf)
 
-[button](information/6x6Silent%20switch.pdf)
-
-[Encoder](information/EC110101R6D-HA1-011%20YBGW080.pdf)
+[Display Datasheet]()
 
 ## DependentLibraries
 * [ESP32_Display_Panel>0.2.1](https://github.com/esp-arduino-libs/ESP32_Display_Panel) (Please [download](./Libraries/ESP32_Display_Panel) the library first as the latest version has not been released yet)
